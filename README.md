@@ -1,2 +1,3 @@
 # stepik_auto_tests_course
-Homework
+Stepik homework 
+https://stepik.org/course/575
