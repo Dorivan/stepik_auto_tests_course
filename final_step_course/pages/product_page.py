@@ -10,6 +10,14 @@ class ProductPage(BasePage):
     def should_be_button_basket(self):
         assert self.is_element_present(*ProductPageLocators.ADD_BUTTON_BASKET), "Button is not present"
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def should_be_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Message is not disappeared, but should be"
+
     def must_be_equal_names(self):
         name_product = self.get_name()
         name_in_allert = self.browser.find_element(*ProductPageLocators.ALLERT_NAME).text
